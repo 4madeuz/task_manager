@@ -8,5 +8,5 @@ INSTALLED_APPS = [
     'rest_framework',
     'djoser',
     'drf_yasg',
-    'tasks.apps.RoomsConfig',
+    'tasks.apps.TasksConfig',
 ]

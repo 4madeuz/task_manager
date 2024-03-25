@@ -33,9 +33,7 @@ class Task(UUIDMixin, TimeStampedMixin):
     status = models.TextField(
         'status', choices=TaskStatus.choices, default=TaskStatus.Added
     )
-    user = models.ForeignKey(
-        User, on_delete=models.CASCADE, related_name='tasks'
-    )
+    users = models.ManyToManyField(User, blank=True)
 
     def __str__(self) -> str:
         return self.title
